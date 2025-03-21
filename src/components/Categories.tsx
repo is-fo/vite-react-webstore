@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import ProductItem from "./ProductItem";
 import ProductForm from "./ProductForm";
+import Credits from "./Credits";
 import "./Categories.css";
 
 export interface Product {
@@ -63,6 +64,9 @@ function Categories() {
             {selectedProduct && (
                 <ProductForm product={selectedProduct} onClose={closePopUp} />
             )}
+            <footer>
+                <Credits />
+            </footer>
         </div>
     );
 }

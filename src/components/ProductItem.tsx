@@ -34,6 +34,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ product, onClick }) => {
         <div className="title-card" onClick={onClick}>
             <h2>{product.title}</h2>
             <p>${product.price}</p>
+            <p>{product.id}</p>
         </div>
     </div>
     );
