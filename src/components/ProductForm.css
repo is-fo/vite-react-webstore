@@ -1,0 +1,72 @@
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  
+.popup {
+  position: relative;
+  min-width: 450px;
+  background-color: whitesmoke;
+  color: black;
+  border-radius: 8px;
+  box-shadow: 0 0 min(200px, 100rem) rgba(255, 255, 255, 0.25);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  h2 {
+    margin: 0;
+    width: 100%;
+    border-bottom: solid 2px black;
+  }
+  .title-price {
+    display: flex;
+    flex-direction: row;
+    p {
+        margin: 4px;
+    }
+  }
+  
+  .purchase-form {
+    div {
+      input {
+        padding: 5px;
+      }
+      p {
+        background-color: #ff4d4d;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        width: 92%;
+      }
+    }
+  }
+}
+
+.close-btn {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 8px;
+  color: white;
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button[type="submit"] {
+  width: 100%;
+  background-color: green;
+}
+

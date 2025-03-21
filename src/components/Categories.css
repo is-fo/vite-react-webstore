@@ -1,0 +1,17 @@
+.category-container {
+    margin-bottom: 20px;
+    font-family: 'Afacad', monospace;
+}
+
+.category-header {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 0.3em;
+}
+
+.product-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
