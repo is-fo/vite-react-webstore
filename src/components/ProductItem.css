@@ -64,7 +64,7 @@
             padding-bottom: 0.2em;
             font-size: 1.6em;
             width: 100%;
-            background-color: #BA324F;
+            background-color: #FCA311;
             cursor: default;
         }
         h2 {
@@ -94,9 +94,11 @@
                 background-color: #175676 ;
                 color: #fff;
             }
+
             button:hover {
-                box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.5);
+                box-shadow: inset 0 0 1em rgba(232,232,232, 0.5);
             }
+            
             .purchase-btn {
                 border-bottom-left-radius: 5px;
                 border-right: 1px solid white;
