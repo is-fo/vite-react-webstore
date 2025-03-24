@@ -1,13 +1,43 @@
 .category-container {
-    margin-bottom: 20px;
     font-family: 'Afacad', monospace;
 }
 
+/* https://codepen.io/raposera/pen/BaEmKVy */
 .category-header {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 0.3em;
+    --primary: #D62839;
+    --secondary: #175676; 
+    --text: #FFFFFF;      
+    --outline: #000000;
+
+    font-size: 4em;
+    font-weight: 900;
+    position: relative;
+    color: var(--text);
+    text-align: center;
+    
+    &::after {
+        content: "";
+        display: block;
+        min-height: 44%;
+        min-width: 100%;
+        position: absolute;
+        bottom: 14%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(180deg, var(--primary) 50%, var(--secondary) 50%);
+        outline: 2px solid var(--outline);
+    }
+
+    & span {
+        position: relative;
+        display: block;
+        color: var(--text);
+        -webkit-text-stroke: 3px var(--outline);
+        filter: drop-shadow(3px 3px 0px var(--outline));
+        z-index: 1;
+    }
 }
+
 
 .product-list {
     display: flex;

@@ -8,6 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 100;
 }
   
 .popup {
@@ -21,6 +22,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  z-index: 111;
   h2 {
     margin: 0;
     width: 100%;

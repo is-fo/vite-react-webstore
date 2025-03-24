@@ -53,7 +53,9 @@ function Categories() {
         <div>
             {Object.entries(groupedProducts).map(([categoryName, products]) => (
                 <div key={categoryName} className="category-container">
-                    <h2 className="category-header">{categoryName}</h2>
+                    <h2 className="category-header">
+                        <span>{categoryName}</span>
+                    </h2>
                     <div className="product-list">
                         {products.map((p) => (
                             <ProductItem key={p.id} product={p} onClick={() => handleProductClick(p)}/>

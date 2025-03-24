@@ -4,13 +4,14 @@
     border-radius: 6px;
     margin: 0.3em;
     width: 22em;
+    background-color: #BA324F;
     text-align: center;
-    position: relative;
     .image-container {
         position: relative;
         img {
             border-top-left-radius: 5px;
             border-top-right-radius: 5px;
+            border-bottom: 1px solid white;
             max-width: 100%;
             height: auto;
             transition: opacity 0.3s ease;
@@ -55,17 +56,55 @@
 
     .title-card {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        padding: 0.1em;
-        justify-content:space-between;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
         p {
+            margin: 0;
+            padding-bottom: 0.2em;
             font-size: 1.6em;
-            padding-right: 1em;
+            width: 100%;
+            background-color: #BA324F;
+            cursor: default;
         }
         h2 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            margin: 0;
+            padding: 0;
             font-size: 1.6em;
-            padding-left: 1em;
+            width: 100%;
+            min-height: 3.2em;
+            cursor: default;
+            border-bottom: 1px solid #fff;
+        }
+        div {
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            border-top: 1px solid white;
+            button {
+                margin: 0px;
+                font-size: 1.3em;
+                width: 50%;
+                text-align: center;
+                border-radius: 0;
+                background-color: #175676 ;
+                color: #fff;
+            }
+            button:hover {
+                box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.5);
+            }
+            .purchase-btn {
+                border-bottom-left-radius: 5px;
+                border-right: 1px solid white;
+            }
+            .addtocart-btn {
+                border-bottom-right-radius: 5px;
+                
+            }
         }
     }
 }
