@@ -1,4 +1,4 @@
-import { createContext, useState, ReactNode, useEffect, useReducer, useContext } from 'react'
+import { createContext, ReactNode, useReducer, useContext } from 'react'
 import { Product } from '../types/Product';
 
 export interface CartItem {
