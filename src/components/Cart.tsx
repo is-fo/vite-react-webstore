@@ -15,7 +15,7 @@ const Cart: React.FC = () => {
                         <span>Your Cart</span>
                     </h2>
         <div className="cart-container">
-            {state.map((item) => (
+            {state.length != 0 ? state.map((item) => (
                 <>
                 <div className="cart-product-container" key={item.product.id} style={{ marginBottom: "20px" }}>
                     <div className="left-col">
@@ -42,7 +42,7 @@ const Cart: React.FC = () => {
                     </div>
                 </div>
             </>
-            ))}
+            )) : <h2>Your cart is empty</h2>}
         </div>
         <div className="cart-total-panel">
             <p>Total: ${totalPrice}</p>
