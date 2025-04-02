@@ -1,6 +1,7 @@
-import React, { useState } from "react";
-import { Product } from "./Categories";
-import "../components/ProductItem.css"
+import React, { useContext, useState } from "react";
+import "../styles/ProductItem.css"
+import { Product } from "../types/Product";
+import { useCart } from "../context/CartContext";
 
 
 
@@ -11,6 +12,8 @@ interface ProductItemProps {
 
 const ProductItem: React.FC<ProductItemProps> = ({ product, onClick }) => {
     const [showDescription, setShowDescription] = useState(false);
+    const {dispatch} = useCart();
+
 
     const handleFlip = () => {
         setShowDescription(!showDescription);
@@ -36,7 +39,7 @@ const ProductItem: React.FC<ProductItemProps> = ({ product, onClick }) => {
             <p>${product.price}</p>
             <div>
                 <button className="purchase-btn" onClick={onClick}>Purchase now</button>
-                <button className="addtocart-btn" >Add to cart</button>
+                <button className="addtocart-btn" onClick={() => dispatch({ type: 'ADD_TO_CART', product})}>Add to cart</button>
             </div>
         </div>
     </div>

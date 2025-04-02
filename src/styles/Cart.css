@@ -1,0 +1,150 @@
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.cart-product-container {
+    display: flex;
+    border: 1px solid white;
+    max-height: 12em;
+    width: fit-content;
+    height: 100%;
+}
+
+.right-col {
+    display: flex;
+    flex-direction: column;
+    padding-right: 1em;
+}
+
+.cart-product-info-container {
+    min-width: 0;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    h3 {
+        margin: 0;
+    }
+    p {
+        margin: 0;
+    }
+}
+
+.cart-product-image {
+    width: auto;
+    height: 12rem;
+    object-fit: contain;
+    margin-right: 1em;
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+
+.cart-button-container {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 4em;
+    max-height: 4em;
+}
+
+.cart-button-clear {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.cart-button-delete {
+   border-radius: 0;
+}
+
+.cart-button-add {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.cart-quantity {
+    cursor: default;
+    border-top: 1px solid white;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 4rem;
+    height: 100%;
+    font-size: 2em;
+}
+
+.cart-button {
+    border: 1px solid white;
+    border-bottom: 0;
+    display: flex;
+    align-items: center;
+    width: 4em;
+    height: 100% !important;
+    background-color: transparent;
+    color: white;
+    transition: background-color 0.2s ease;
+}
+
+.cart-button:hover {
+    background-color: #17567655;
+}
+
+.cart-button:active {
+    background-color: #fff;
+}
+
+.cart-product-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+.cart-product-image {
+    height: 12em;
+    width: auto;
+    object-fit: contain;
+}
+
+.cart-product-info-container {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5em;
+    width: 100%;
+}
+
+.cart-button-container {
+    margin-top: auto;
+}
+
+.cart-button {
+    height: 100%;
+}
+
+.cart-quantity {
+    height: 100%;
+}
+
+.cart-total-panel {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #D62839;
+    color: white;
+    padding: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    border-top: 1px solid #fff;
+}
+
+.cart-clear-all {
+    margin-left: 1em;
+    width: fit-content;
+}

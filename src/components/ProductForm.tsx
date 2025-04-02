@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Product } from "./Categories";
-import "./ProductForm.css";
+import "../styles/ProductForm.css";
+import { Product } from "../types/Product";
 
 interface ProductFormPopup {
   product: Product;

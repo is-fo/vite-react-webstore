@@ -1,36 +1,16 @@
-import { useState, useEffect } from "react";
-import ProductItem from "./ProductItem";
+import { useState } from "react";
+import ProductItem from "./ProductCard";
 import ProductForm from "./ProductForm";
 import Credits from "./Credits";
-import "./Categories.css";
+import "../styles/Categories.css";
+import { Product } from "../types/Product";
+import { useProducts } from "../context/ProductContext";
 
-export interface Product {
-    id: number;
-    title: string;
-    slug: string;
-    price: number;
-    description: string;
-    category: Category;
-    images: string[];
-}
 
-interface Category {
-    id: number;
-    name: string;
-    image: string;
-    slug: string;
-}
-
-function Categories() {
-    const [products, setProducts] = useState<Product[]>([]);
+const Categories: React.FC = () => {
     const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
 
-    useEffect(() => {
-        fetch("https://api.escuelajs.co/api/v1/products")
-        .then((res) => res.json())
-        .then((data) => setProducts(data))
-        .catch(console.error);
-    }, []);
+    const { products } = useProducts();
 
     const groupedProducts = products.reduce((acc, product) => {
         const categoryName = product.category.name;
@@ -41,7 +21,7 @@ function Categories() {
         return acc;
     }, {} as Record<string, Product[]>);
 
-    const handleProductClick = (product: Product) => {
+    const handlePurchaseNow = (product: Product) => {
         setSelectedProduct(product);
     }
 
@@ -58,7 +38,7 @@ function Categories() {
                     </h2>
                     <div className="product-list">
                         {products.map((p) => (
-                            <ProductItem key={p.id} product={p} onClick={() => handleProductClick(p)}/>
+                            <ProductItem key={p.id} product={p} onClick={() => handlePurchaseNow(p)}/>
                         ))}
                     </div>
                 </div>
