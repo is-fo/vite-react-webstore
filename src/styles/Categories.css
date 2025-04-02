@@ -4,11 +4,6 @@
 
 /* https://codepen.io/raposera/pen/BaEmKVy */
 .category-header {
-    --primary: #D62839;
-    --secondary: #175676; 
-    --text: #FFFFFF;      
-    --outline: #000000;
-
     font-size: 4em;
     font-weight: 900;
     position: relative;

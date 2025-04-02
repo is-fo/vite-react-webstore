@@ -5,6 +5,11 @@
   background-color: #4BA3C3;
   width: 100vw;
   min-height: 100vh;
+  --primary: #D62839;
+  --secondary: #175676; 
+  --text: #FFFFFF;      
+  --outline: #000000;
+  margin-top: 3.5rem;
 }
 
 .logo {
@@ -42,3 +47,46 @@
 .read-the-docs {
   color: rgb(204, 230, 244);
 }
+
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--primary);
+  color: var(--text);
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  box-shadow: 0 2px 4px var(--outline);
+  height: auto;
+}
+
+header a {
+  margin: 0 0.5rem;
+}
+
+header a:hover {
+  opacity: 0.8;
+}
+
+.header-button {
+  width: 10rem !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-button.active {
+  background-color: var(--secondary);
+  color: var(--text);
+  opacity: 0.9;
+}
+
+.header-button:active,
+.header-button:focus {
+  outline: none !important;
+  text-decoration: underline;
+}
+

@@ -13,6 +13,7 @@ function App() {
 
   const switchPage = (newPage: string) => {
     setPage(newPage);
+    window.scrollTo({ top: 0, behavior: "smooth" })
   }
 
   return (
@@ -28,9 +29,17 @@ function App() {
         </div>
         <h1>Vite + React</h1>
         <header>
-          <button onClick={() => switchPage("home")}>Home</button>
-          <button onClick={() => switchPage("cart")}>Cart</button>
-        </header>
+          <button
+              className={`cart-button cart-button-clear header-button ${page === "home" ? "active" : ""}`}
+              onClick={() => switchPage("home")}>
+              Home
+          </button>
+          <button
+              className={`cart-button cart-button-add header-button ${page === "cart" ? "active" : ""}`}
+              onClick={() => switchPage("cart")}>
+              Cart
+          </button>
+      </header>
         <main>
               {page === "home" && <Categories />}
               {page === "cart" && <Cart />}
