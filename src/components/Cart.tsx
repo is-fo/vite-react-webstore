@@ -9,6 +9,10 @@ const Cart: React.FC = () => {
         0
     ).toFixed(2);
 
+    const checkout = () => {
+        alert(`${state.map(p => p.quantity + "x " + p.product.title + " $" + p.product.price * p.quantity).join('\n')}\nTotal: \$${totalPrice}`)
+    }
+
     return (
     <div className="category-container">
         <h2 className="category-header">
@@ -45,8 +49,9 @@ const Cart: React.FC = () => {
             )) : <h2>Your cart is empty</h2>}
         </div>
         <div className="cart-total-panel">
-            <p>Total: ${totalPrice}</p>
             <button className="cart-button cart-clear-all" onClick={() => dispatch({ type: "CLEAR_CART", any: [] })}>CLEAR CART</button>
+            <p>Total: ${totalPrice}</p>
+            <button className="cart-button cart-clear-all" onClick={() => {state.length > 0 ? checkout() : alert("Cart is empty."); dispatch({ type:"CLEAR_CART", any: [] })}}>CHECKOUT</button>
         </div>
     </div>
     );
