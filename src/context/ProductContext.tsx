@@ -11,7 +11,7 @@ export const ProductProvider: React.FC<{ children: React.ReactNode }> = ({ child
     const [products, setProducts] = useState<Product[]>([]);
 
     useEffect(() => {
-        fetch(`$PRODUCT_API_URL/api/products`)
+        fetch(`${import.meta.env.VITE_API_URL}/api/products`)
         .then((res) => res.json())
         .then((data) => setProducts(data))
         .catch(console.error);
