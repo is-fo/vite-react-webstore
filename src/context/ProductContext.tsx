@@ -11,7 +11,7 @@ export const ProductProvider: React.FC<{ children: React.ReactNode }> = ({ child
     const [products, setProducts] = useState<Product[]>([]);
 
     useEffect(() => {
-        fetch("https://api.escuelajs.co/api/v1/products")
+        fetch("https://your-app-name.up.railway.app/api/products")
         .then((res) => res.json())
         .then((data) => setProducts(data))
         .catch(console.error);
